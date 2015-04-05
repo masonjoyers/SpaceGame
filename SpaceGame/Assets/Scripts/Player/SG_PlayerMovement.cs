@@ -15,6 +15,8 @@ public class SG_PlayerMovement : MonoBehaviour {
 	public float currentPitch = 0.0f;
 	public float currentRoll = 0.0f;
 
+	Rigidbody playerRB;
+
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +35,12 @@ public class SG_PlayerMovement : MonoBehaviour {
 		float h = Input.GetAxisRaw ("Horizontal");
 		float v = Input.GetAxisRaw ("Vertical");
 		
+		CalcMovementUpdate (h, v);
+
+	}
+
+	// Calculates the Movement update for the player's Rigidbody and keeps them within limits.
+	void CalcMovementUpdate( float h, float v ){
 
 	}
 }
